@@ -101,15 +101,15 @@ function movieThis(value) {
 
 function doThis() {
 
-    fs.readFile("random.txt", "utf8", function(error, data) {
+    fs.readFile("random.txt", "utf8", function (error, data) {
 
         if (error) {
-          return console.log(error);
+            return console.log(error);
         }
 
         var dataArr = data.split(",");
-      
+
         value = dataArr[1];
-        spotifySong()
-      });
+        spotifySong(value)
+    });
 }
